@@ -58,7 +58,7 @@
      */
     Challenge.prototype.start = function () {
         try {
-            this._server                = this._app.listen(PORT);
+            this._server                = this._app.listen(PORT, "0.0.0.0");
             this._server.maxConnections = MAX_CONNECTIONS;
             console.log('Started listening on port ' + PORT);
             console.log('Please point your browser to 127.0.0.1:' + PORT +
